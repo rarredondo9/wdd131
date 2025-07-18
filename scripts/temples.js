@@ -11,7 +11,7 @@ const menuToggle = document.getElementById("menu-toggle");
 const navMenu = document.getElementById("nav-menu");
 
 menuToggle.addEventListener("click", () => {
-  const isVisible = navMenu.style.display === "flex";
-  navMenu.style.display = isVisible ? "none" : "flex";
-  menuToggle.textContent = isVisible ? "☰" : "✖";
+  navMenu.classList.toggle("open");
+
+  menuToggle.textContent = navMenu.classList.contains("open") ? "✖" : "☰";
 });
