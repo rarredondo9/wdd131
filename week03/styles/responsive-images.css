@@ -1,0 +1,11 @@
+.hero {
+  aspect-ratio: 2 / 1;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+}

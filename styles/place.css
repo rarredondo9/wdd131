@@ -1,0 +1,127 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f5f1e7;
+  color: #222222;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background-color: #2c5d8f;
+  color: #ffffff;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+h1 {
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
+/* Hero image wrapper */
+.hero-container {
+  position: relative;
+}
+
+.hero-container picture img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.data-box,
+.weather-box {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.9); 
+  border-radius: 6px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  padding: 1rem 1.5rem;
+  width: 300px;
+}
+
+.data-box {
+  top: 20%;
+  left: 5%;
+}
+
+.weather-box {
+  bottom: 15%;
+  right: 5%;
+}
+
+.data-box h2,
+.weather-box h2 {
+  background-color: #2c5d8f;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 4px 4px 0 0;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+
+.weather-box h2::after {
+  content: " ⛅";
+  margin-left: 0.5rem;
+  font-size: 1rem;
+}
+
+.data-box p,
+.weather-box p {
+  margin: 0.25rem 0;
+}
+
+.data-box strong,
+.weather-box strong {
+  font-weight: bold;
+}
+
+/* Mobile SVG weather icon */
+.mobile-icon {
+  width: 32px;
+  height: auto;
+  margin-bottom: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .mobile-icon {
+    display: none;
+  }
+}
+
+/* Footer */
+footer {
+  background-color: #003049;
+  color: #ffffff;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  font-size: 0.95rem;
+}
+
+footer span {
+  font-weight: bold;
+}
+
+/* Responsive layout */
+@media (max-width: 767px) {
+  .data-box,
+  .weather-box {
+    position: static;
+    width: auto;
+    margin: 1rem;
+  }
+
+  .weather-box h2::after {
+    content: "";
+  }
+
+  .mobile-icon {
+    display: block;
+  }
+}
