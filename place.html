@@ -1,55 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 131 - Country Page </title>
-    <meta name="description" content="WDD 131 - Country page assignment">
-    <meta name="author" content="Rebeca Arredondo">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/place.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WDD 131 - Country Page</title>
+  <meta name="description" content="WDD 131 - Country page assignment" />
+  <meta name="author" content="Rebeca Arredondo" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Manrope:wght@200..800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/place.css" />
 </head>
-</head>
+
 <body>
-     <header>
+  <header>
     <h1>Portugal</h1>
   </header>
 
   <main>
     <div class="hero-container">
-    <picture>
-      <source srcset="images/hero-large.webp" media="(min-width: 1000px)">
-      <source srcset="images/hero-medium.webp" media="(min-width: 500px)">
-      <img src="images/hero-small.webp" alt="Lisbon Tram" width="1500" height="750">
-    </picture>
+      <picture>
+        <source srcset="images/hero-large.webp" media="(min-width: 1000px)" />
+        <source srcset="images/hero-medium.webp" media="(min-width: 500px)" />
+        <img src="images/hero-small.webp" alt="Lisbon Tram" width="1500" height="750" />
+      </picture>
 
-    <section class="info-container">
-      <div class="data-box">
-        <h2>Data</h2>
-        <p><strong>Area:</strong> 92,090-92,212km²</p>
-        <p><strong>Population:</strong> 10.58 million </p>
-        <p><strong>Capital:</strong> Lisbon</p>
-        <p><strong>Languages:</strong> Portuguese</p>
-        <p><strong>Currency:</strong> Euro </p>
-      </div>
+      <section class="info-container">
+        <div class="data-box">
+          <h2>Data</h2>
+          <p><strong>Area:</strong> 92,090–92,212 km²</p>
+          <p><strong>Population:</strong> 10.58 million</p>
+          <p><strong>Capital:</strong> Lisbon</p>
+          <p><strong>Languages:</strong> Portuguese</p>
+          <p><strong>Currency:</strong> Euro (€)</p>
+        </div>
 
-      <div class="weather-box desktop">
-        <h2>Weather</h2>
-        <img src="images/partly-cloudy.svg" alt="Weather Icon" class="mobile-icon" />
-        <p><strong>Temperature:</strong> 10°C</p>
-        <p><strong>Conditions:</strong> Partly Cloudy</p>
-        <p><strong>Wind:</strong> 5 km/h</p>
-        <p><strong>Wind Chill:</strong> <span id="windChill">--</span></p>
-      </div>
-    </section>
+        <div class="weather-box desktop">
+          <h2>Weather</h2>
+          <img src="images/partly-cloudy.svg" alt="Weather Icon" class="mobile-icon" />
+          <p><strong>Temperature:</strong> 10°C</p>
+          <p><strong>Conditions:</strong> Partly Cloudy</p>
+          <p><strong>Wind:</strong> 5 km/h</p>
+          <p><strong>Wind Chill:</strong> <span id="windChill">--</span></p>
+        </div>
+      </section>
+    </div>
   </main>
-    <script src="scripts/place.js" defer></script>
 
-    <footer>
-        <p>&copy; <span id="currentyear"></span> Rebeca Arredondo, Guatemala</p>
-        <p id="lastModified"></p>
-    </footer>
+  <footer>
+    <p>&copy; <span id="currentyear"></span> Rebeca Arredondo, Guatemala</p>
+    <p id="lastModified"></p>
+  </footer>
+
+  <script src="scripts/place.js" defer></script>
 </body>
 </html>

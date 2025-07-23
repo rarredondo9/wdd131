@@ -1,3 +1,8 @@
+:root {
+  --primary-color: #2c5d8f; 
+  --secondary-color: #f4c430;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -13,7 +18,7 @@ body {
 
 /* Header */
 header {
-  background-color: #2c5d8f;
+  background-color: var(--primary-color);
   color: #ffffff;
   text-align: center;
   padding: 1.5rem;
@@ -38,7 +43,7 @@ h1 {
 .data-box,
 .weather-box {
   position: absolute;
-  background-color: rgba(255, 255, 255, 0.9); 
+  background-color: rgba(255, 255, 255, 0.9);
   border-radius: 6px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   padding: 1rem 1.5rem;
@@ -57,7 +62,7 @@ h1 {
 
 .data-box h2,
 .weather-box h2 {
-  background-color: #2c5d8f;
+  background-color: var(--primary-color);
   color: white;
   padding: 0.5rem 1rem;
   border-radius: 4px 4px 0 0;
