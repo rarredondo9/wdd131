@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Press+Start+2P&display=swap');
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+header {
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.logo {
+  max-width: 80px;
+  display: block;
+  margin: 0 auto 1rem;
+}
+
+h1 {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.tagline {
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+main {
+  padding: 1rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+h2 {
+  color: #4CAF50;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1rem;
+}
+
+ul {
+  list-style: square inside;
+  margin: 0.5rem 0 1rem 0;
+  padding: 0;
+}
+
+.color-box {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  margin-right: 8px;
+  border: 1px solid #000;
+}
+
+.green {
+  background-color: #4CAF50;
+}
+
+.brown {
+  background-color: #5D4037;
+}
+
+.wireframe {
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 1.5rem;
+  border: 2px dashed #999;
+}
+
+.desktop-wireframe {
+  max-width: 600px;
+}
+
+.mobile-wireframe {
+  max-width: 300px; 
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #5D4037;
+  color: white;
+  font-size: 0.8rem;
+}
