@@ -143,6 +143,10 @@ main {
     width: 250px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
   }
+
+  #nav-menu.open {
+    display: flex;
+  }
 }
 
 @media (min-width: 769px) {
