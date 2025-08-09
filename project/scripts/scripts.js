@@ -15,12 +15,12 @@ document.addEventListener("DOMContentLoaded", () => {
 const menuToggle = document.querySelector(".menu-toggle");
 const mainNav = document.querySelector(".main-nav");
 
-menuToggle.addEventListener("click", () => {
-  mainNav.classList.toggle("open");
-
-  menuToggle.textContent = mainNav.classList.contains("open") ? "✖" : "☰";
-});
-
+if(menuToggle && mainNav) {
+  menuToggle.addEventListener("click", () => {
+    mainNav.classList.toggle("open");
+    menuToggle.textContent = mainNav.classList.contains("open") ? "✖" : "☰";
+  });
+}
   // ===== Feedback Form =====
   const recipes = [
     { id: "banana-cake", name: "Banana Cake" },

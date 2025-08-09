@@ -15,8 +15,10 @@
 <body>
   <header class="site-header">
     <div class="logo-container">
+      <a href="index.html" aria-label="homepage">
       <img src="images/logo.webp" alt="Banana Cake" loading="lazy" />
-      <div class="logo">Lava Kitchen</div>
+      </a>
+      <div href="index.html" class="logo" aria-label="Homepage">Lava Kitchen</div>
     </div>
     <nav class="main-nav" id="nav-menu">
       <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
@@ -35,7 +37,7 @@
           <p>
             This week's favorite is the sweet and creamy <strong>Raspberry Cheesecake</strong>! It's super easy and fun to decorate with raspberries. This is a recipe you can enjoy with all your family. But you will need some help! Hope you have a great time cooking it with your family.
           </p>
-          <a href="#" class="btn">View Recipe</a>
+          <a href="cheesecake.html" class="btn">View Recipe</a>
         </div>
         <div class="featured-img">
           <picture>
@@ -51,27 +53,33 @@
       <h2>All My Recipes</h2>
       <div class="card-grid">
         <div class="recipe-card">
+          <a href="banana-cake.html" aria-label="Banana cake recipe">
           <picture>
             <source srcset="images/banana-cake-large.webp" media="(min-width: 1000px)" />
             <source srcset="images/banana-cake-medium.webp" media="(min-width: 500px)" />
             <img src="images/banana-cake-small.webp" alt="Banana Cake" loading="lazy" width="600" height="900" />
           </picture>
+          </a>
           <h3>Banana Cake</h3>
         </div>
         <div class="recipe-card">
+          <a href="charcuterie.html" aria-label="Charcuterie recipe">
           <picture>
             <source srcset="images/charcuterie-large.webp" media="(min-width: 1000px)" />
             <source srcset="images/charcuterie-medium.webp" media="(min-width: 500px)" />
             <img src="images/charcuterie-small.webp" alt="Charcuterie Board" loading="lazy" width="600" height="900" />
           </picture>
+          </a>
           <h3>Charcuterie Board</h3>
         </div>
         <div class="recipe-card">
+          <a href="cheesecake.html" aria-label="cheesecake recipe">
           <picture>
             <source srcset="images/cheesecake-large.webp" media="(min-width: 1000px)" />
             <source srcset="images/cheesecake-medium.webp" media="(min-width: 500px)" />
             <img src="images/cheesecake-small.webp" alt="Raspberry Cheesecake" loading="lazy" width="600" height="900" />
           </picture>
+          </a>
           <h3>Raspberry Cheesecake</h3>
         </div>
       </div>
