@@ -18,7 +18,6 @@ document.addEventListener("DOMContentLoaded", () => {
   if (menuToggle && mainNav) {
     menuToggle.addEventListener("click", () => {
       mainNav.classList.toggle("open");
-      // Removed navLinks.style.display toggle to avoid conflicts
       menuToggle.textContent = mainNav.classList.contains("open") ? "✖" : "☰";
     });
   }
