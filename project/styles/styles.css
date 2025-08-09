@@ -43,11 +43,11 @@ p {
   font-size: 1rem;
 }
 
-/* ========== header ========== */
 main {
   flex-grow: 1;
 }
 
+/* ===== HEADER ===== */
 .site-header {
   background-color: #3e3e3e;
   color: #fff;
@@ -80,18 +80,21 @@ main {
   position: relative; 
 }
 
-/* Update: Hide the inner nav by default */
-#nav-menu nav {
-  display: flex; /* fallback, overridden by media queries */
-  list-style: none;
-  gap: 1rem;
-  flex-direction: row;
-  background: none;
-  padding: 0;
+/* ===== NAV LINKS ===== */
+#nav-menu {
+  display: none;
+  flex-direction: column;
+  background-color: #3e3e3e;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  padding: 1rem;
+  z-index: 1000;
+  width: 150px;
+  border-radius: 4px;
 }
 
-/* Links inside nav */
-#nav-menu nav a {
+#nav-menu a {
   color: white;
   text-decoration: none;
   padding: 0.3rem 0.5rem;
@@ -101,11 +104,48 @@ main {
   font-size: 0.6rem;
 }
 
-#nav-menu nav a:hover {
+#nav-menu a:hover {
   background-color: #58c431;
 }
 
-/* ========== recipe of the week ========== */
+/* ===== HAMBURGER BUTTON ===== */
+#menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+  z-index: 1001;
+  position: relative;
+}
+
+/* ===== RESPONSIVE NAV ===== */
+@media (max-width: 768px) {
+  #menu-toggle {
+    display: block;
+  }
+
+  #nav-menu.open {
+    display: flex !important;
+  }
+}
+
+@media (min-width: 769px) {
+  #menu-toggle {
+    display: none;
+  }
+
+  #nav-menu {
+    display: flex !important;
+    position: static;
+    flex-direction: row;
+    background: none;
+    padding: 0;
+  }
+}
+
+/* ===== RECIPE OF THE WEEK ===== */
 .featured-recipe {
   background-color: #fff;
   padding: 2rem;
@@ -155,7 +195,7 @@ main {
   background-color: #4aa52a;
 }
 
-/* ========== recipe cards ========== */
+/* ===== RECIPE CARDS ===== */
 .recipe-list {
   padding: 2rem;
   background-color: #eef2e0;
@@ -195,7 +235,7 @@ main {
   border-radius: 10px 10px 0 0;
 }
 
-/* ========== comments ========== */
+/* ===== COMMENTS ===== */
 .comments {
   padding: 2rem;
   background-color: #fff;
@@ -208,7 +248,7 @@ main {
   font-family: 'Open Sans', sans-serif;
 }
 
-/* ========== RECIPES PAGE ========== */
+/* ===== RECIPE DETAIL ===== */
 .recipe-card p {
   font-size: 0.85rem;
   margin: 0.5rem 0;
@@ -220,7 +260,6 @@ main {
   background-color: #58c431;
 }
 
-/* ========== RECIPES ========== */
 .recipe-detail {
   padding: 2rem;
   background-color: #fff;
@@ -264,7 +303,7 @@ main {
   margin-bottom: 0.5rem;
 }
 
-/* ========== FEEDBACK PAGE ========== */
+/* ===== FEEDBACK FORM ===== */
 form {
   font-family: 'Press Start 2P', cursive;
   background-color: #d9d9d9;
@@ -323,7 +362,7 @@ input[type="submit"]:hover {
   background-color: #008000;
 }
 
-/* ========== THANK YOU PAGE ========== */
+/* ===== THANK YOU PAGE ===== */
 .thankyou-page {
   text-align: center;
   background-color: #eef2e0;
@@ -348,7 +387,7 @@ input[type="submit"]:hover {
   margin-bottom: 1.5rem;
 }
 
-/* ========== footer ========== */
+/* ===== FOOTER ===== */
 .site-footer {
   background-color: #3e3e3e;
   color: white;
@@ -374,53 +413,4 @@ input[type="submit"]:hover {
 .social-icon {
   width: 24px;
   height: 24px;
-}
-
-/* ========== hamburger nav ========== */
-#menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 1.5rem;
-  color: white;
-  cursor: pointer;
-  z-index: 1001;
-  position: relative;
-}
-
-#nav-menu nav {
-  display: none;
-  flex-direction: column;
-  background-color: #3e3e3e;
-  position: absolute;
-  top: 60px;
-  right: 0;
-  padding: 1rem;
-  z-index: 1000;
-  width: 150px;
-  border-radius: 4px;
-}
-
-@media (max-width: 768px) {
-  #menu-toggle {
-    display: block;
-  }
-
-  .main-nav.open #nav-menu nav {
-    display: flex !important;
-  }
-}
-
-@media (min-width: 769px) {
-  #menu-toggle {
-    display: none;
-  }
-
-  #nav-menu nav {
-    display: flex !important;
-    position: static;
-    flex-direction: row;
-    background: none;
-    padding: 0;
-  }
 }
