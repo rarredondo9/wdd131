@@ -12,13 +12,14 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // ===== Hamburger Menu =====
-  const hamburger = document.querySelector(".hamburger");
-  const navLinks = document.querySelector(".nav-links");
-  if (hamburger && navLinks) {
-    hamburger.addEventListener("click", () => {
-      navLinks.classList.toggle("show");
-    });
-  }
+const menuToggle = document.querySelector(".menu-toggle");
+const mainNav = document.querySelector(".main-nav");
+
+menuToggle.addEventListener("click", () => {
+  mainNav.classList.toggle("open");
+
+  menuToggle.textContent = mainNav.classList.contains("open") ? "✖" : "☰";
+});
 
   // ===== Feedback Form =====
   const recipes = [
