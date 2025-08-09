@@ -56,6 +56,7 @@ main {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  position: relative; 
 }
 
 .logo-container {
@@ -76,22 +77,23 @@ main {
 .main-nav {
   display: flex;
   align-items: center;
-  position: relative;
+  position: static; 
 }
 
 /* ===== NAV LINKS ===== */
 #nav-menu {
+
   display: none;
   flex-direction: column;
   background-color: #3e3e3e;
   position: absolute;
   top: 100%;
-  right: 0;
   padding: 1rem;
   z-index: 1000;
   width: 150px;
   border-radius: 4px;
-  border: 2px solid #00a000; 
+  border: 2px solid #00a000;
+  box-sizing: border-box;
 }
 
 #nav-menu a {
@@ -130,18 +132,25 @@ main {
     display: block;
   }
 
+
   #nav-menu {
     flex-direction: column;
     background-color: #3e3e3e;
     position: absolute;
-    top: 60px; 
-    left: 0;
-    right: auto;
-    padding: 1rem;
+    top: 100%;        
+    left: 0;         
+    right: 0;        
+    padding: 1rem 2rem; 
     border-radius: 0 0 8px 8px;
     z-index: 1000;
-    width: 250px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+
+  #nav-menu a {
+    display: block;
+    padding: 0.6rem 0;
+    font-size: 0.9rem;
   }
 
   #nav-menu.open {
