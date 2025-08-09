@@ -10,25 +10,16 @@ document.addEventListener("DOMContentLoaded", () => {
   if (lastModifiedElem) {
     lastModifiedElem.textContent = `Last Modification: ${document.lastModified}`;
   }
+    // ===== Hamburguer =====
+  const menuToggle = document.getElementById("menu-toggle");
+  const navMenu = document.getElementById("nav-menu");
 
-  // ===== Hamburger Menu =====
-  const menuToggle = document.getElementById('menu-toggle');
-  const navMenu = document.getElementById('nav-menu');
-
-  console.log('menuToggle:', menuToggle);
-  console.log('navMenu:', navMenu);
-
-  menuToggle.addEventListener('click', () => {
-    console.log('Menu toggle clicked');
-    navMenu.classList.toggle('open');
-    console.log('navMenu classes:', navMenu.classList.toString());
-    if(navMenu.classList.contains('open')) {
-      menuToggle.innerHTML = '&times;';
-    } else {
-      menuToggle.innerHTML = '&#9776;';
-    }
-  });
-
+  if (menuToggle && navMenu) {
+    menuToggle.addEventListener("click", () => {
+      const isOpen = navMenu.classList.toggle("open");
+      menuToggle.setAttribute("aria-expanded", isOpen);
+    });
+  }
   // ===== Feedback Form Recipes =====
   const recipes = [
     { id: "banana-cake", name: "Banana Cake" },

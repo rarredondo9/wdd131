@@ -108,18 +108,18 @@ main {
   background-color: #58c431;
 }
 
-/* ===== HAMBURGER BUTTON ===== */
+/* ===== MENU TOGGLE BUTTON ===== */
 #menu-toggle {
-  display: none;
   background: none;
   border: none;
-  font-size: 2rem;
   color: white;
+  font-size: 2rem;
   cursor: pointer;
-  z-index: 1001;
-  position: relative;
+  display: none; /* hidden by default on desktop */
+  padding: 0.25rem 0.5rem;
 }
 
+/* ===== MEDIA QUERIES ===== */
 @media (max-width: 768px) {
   #menu-toggle {
     display: block;
@@ -136,6 +136,7 @@ main {
     padding: 1rem;
     border-radius: 0 0 8px 8px;
     z-index: 1000;
+    width: auto;
   }
 
   #nav-menu.open {
@@ -148,10 +149,6 @@ main {
   .main-nav {
     display: flex;
     align-items: center;
-  }
-
-  #menu-toggle {
-    display: none;
   }
 
   #nav-menu {
@@ -391,4 +388,3 @@ input[type="submit"]:hover {
   width: 24px;
   height: 24px;
 }
-
