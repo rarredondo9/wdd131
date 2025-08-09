@@ -12,16 +12,14 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // ===== Hamburger Menu =====
-  const menuToggle = document.querySelector(".menu-toggle");
-  const mainNav = document.querySelector(".main-nav");
+// Hamburger menu toggle
+const menuToggle = document.getElementById("menu-toggle");
+const navMenu = document.getElementById("nav-menu");
 
-  if (menuToggle && mainNav) {
-    menuToggle.addEventListener("click", () => {
-      mainNav.classList.toggle("open");
-      menuToggle.textContent = mainNav.classList.contains("open") ? "✖" : "☰";
-    });
-  }
-
+menuToggle.addEventListener("click", () => {
+  navMenu.classList.toggle("open");
+  menuToggle.textContent = navMenu.classList.contains("open") ? "✖" : "☰";
+});
   // ===== Feedback Form =====
   const recipes = [
     { id: "banana-cake", name: "Banana Cake" },
