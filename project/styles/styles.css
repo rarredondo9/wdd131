@@ -80,13 +80,18 @@ main {
   position: relative; 
 }
 
-#nav-menu {
-  display: flex;
-  gap: 1rem;
+/* Update: Hide the inner nav by default */
+#nav-menu nav {
+  display: flex; /* fallback, overridden by media queries */
   list-style: none;
+  gap: 1rem;
+  flex-direction: row;
+  background: none;
+  padding: 0;
 }
 
-#nav-menu a {
+/* Links inside nav */
+#nav-menu nav a {
   color: white;
   text-decoration: none;
   padding: 0.3rem 0.5rem;
@@ -96,7 +101,7 @@ main {
   font-size: 0.6rem;
 }
 
-#nav-menu a:hover {
+#nav-menu nav a:hover {
   background-color: #58c431;
 }
 
@@ -371,66 +376,51 @@ input[type="submit"]:hover {
   height: 24px;
 }
 
-/* ========== hamburger nav toggle button ========== */
+/* ========== hamburger nav ========== */
 #menu-toggle {
-  display: none; 
+  display: none;
   background: none;
   border: none;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   color: white;
   cursor: pointer;
   z-index: 1001;
   position: relative;
 }
 
-/* ========== MOBILE STYLES ========== */
+#nav-menu nav {
+  display: none;
+  flex-direction: column;
+  background-color: #3e3e3e;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  padding: 1rem;
+  z-index: 1000;
+  width: 150px;
+  border-radius: 4px;
+}
+
 @media (max-width: 768px) {
   #menu-toggle {
     display: block;
   }
 
-  #nav-menu {
-    display: none;
-    flex-direction: column;
-    background-color: #3e3e3e;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    padding: 1rem;
-    width: 150px;
-    border-radius: 4px;
-    z-index: 1000;
-  }
-
-  .main-nav.open #nav-menu {
-    display: flex;
-  }
-
-
-  #nav-menu a {
-    padding: 0.8rem 1rem;
-    font-size: 0.8rem;
-    border-bottom: 1px solid #58c431;
+  .main-nav.open #nav-menu nav {
+    display: flex !important;
   }
 }
 
-/* ========== DESKTOP STYLES ========== */
 @media (min-width: 769px) {
-  #nav-menu {
+  #menu-toggle {
+    display: none;
+  }
+
+  #nav-menu nav {
     display: flex !important;
     position: static;
     flex-direction: row;
     background: none;
     padding: 0;
-    gap: 1rem;
-  }
-
-  #nav-menu a {
-    border: none;
-    font-size: 0.6rem;
-  }
-
-  #menu-toggle {
-    display: none;
   }
 }
