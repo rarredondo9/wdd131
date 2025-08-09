@@ -15,12 +15,20 @@ document.addEventListener("DOMContentLoaded", () => {
   const menuToggle = document.querySelector(".menu-toggle");
   const mainNav = document.querySelector(".main-nav");
 
-  if (menuToggle && mainNav) {
-    menuToggle.addEventListener("click", () => {
-      mainNav.classList.toggle("open");
-      menuToggle.textContent = mainNav.classList.contains("open") ? "✖" : "☰";
-    });
-  }
+if (menuToggle && mainNav) {
+  menuToggle.addEventListener("click", () => {
+    mainNav.classList.toggle("open");
+    const navLinks = mainNav.querySelector(".nav-links");
+    if (navLinks) {
+      if (mainNav.classList.contains("open")) {
+        navLinks.style.display = "flex";
+      } else {
+        navLinks.style.display = "none";
+      }
+    }
+    menuToggle.textContent = mainNav.classList.contains("open") ? "✖" : "☰";
+  });
+}
 
   // ===== Feedback Form =====
   const recipes = [
