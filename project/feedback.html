@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WDD 131 - Lava Kitchen - Rebeca Arredondo</title>
+  <meta name="description" content="WDD 131 - Lava Kitchen Recipe Website" />
+  <meta name="author" content="Rebeca Arredondo" />
+  <link rel="stylesheet" href="styles/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Press+Start+2P&display=swap" rel="stylesheet" />
+  <link rel="icon" href="images/favicon.ico" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo-container">
+      <img src="images/logo.webp" alt="Banana Cake" loading="lazy" />
+      <div class="logo">Lava Kitchen</div>
+    </div>
+    <nav class="main-nav">
+      <button class="hamburger" aria-label="Open menu">☰</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="recipes.html">Recipes</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+      </ul>
+    </nav>
+  </header>
+
+<main class="recipe-detail">
+    <h1>Recipe Feedback</h1>
+
+  <form action="thankyou.html" method="get" id="recipeForm">
+    <label for="recipe">Recipe Name:</label>
+    <select id="recipe" name="recipe" required>
+      <option disabled selected value="">Select a Recipe ...</option>
+    </select>
+
+    <fieldset>
+      <legend>Overall Rating</legend>
+      <label><input type="radio" name="rating" value="1" required> ☆</label>
+      <label><input type="radio" name="rating" value="2"> ☆☆</label>
+      <label><input type="radio" name="rating" value="3"> ☆☆☆</label>
+      <label><input type="radio" name="rating" value="4"> ☆☆☆☆</label>
+      <label><input type="radio" name="rating" value="5"> ☆☆☆☆☆</label>
+    </fieldset>
+
+    <label for="madeDate">Date You Made It:</label>
+    <input type="date" id="madeDate" name="madeDate" required>
+
+    <fieldset>
+      <legend>What Did You Like? (Check all that apply)</legend>
+      <label><input type="checkbox" name="likes" value="easy"> Easy to make</label>
+      <label><input type="checkbox" name="likes" value="tasty"> Tasty</label>
+      <label><input type="checkbox" name="likes" value="healthy"> Healthy</label>
+      <label><input type="checkbox" name="likes" value="quick"> Quick to prepare</label>
+    </fieldset>
+
+    <label for="comments">Your Comments:</label>
+    <textarea id="comments" name="comments" rows="5"></textarea>
+
+    <label for="username">Your Name (optional):</label>
+    <input type="text" id="username" name="username">
+
+    <input type="submit" value="Submit Feedback">
+  </form>
+</main>
+
+ <footer class="site-footer">
+    <p>&copy; <span id="currentyear"></span> Lava Kitchen</p>
+    <p id="lastModified"></p>
+    <div class="social-icons">
+      <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+        <img src="images/facebook-icon.webp" alt="Facebook logo" class="social-icon" />
+      </a>
+      <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+        <img src="images/instagram-icon.webp" alt="Instagram logo" class="social-icon" />
+      </a>
+    </div>
+  </footer>
+
+
+  <script src="scripts/scripts.js" defer></script>
+</body>
+</html>
