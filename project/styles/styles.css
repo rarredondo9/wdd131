@@ -125,7 +125,9 @@ main {
 
 .featured-img img {
   width: 100%;
-  max-width: 300px;
+  max-width: 500px;
+  height: 300px;
+  object-fit: cover;
   border-radius: 8px;
   box-shadow: 0 0 8px rgba(0,0,0,0.2);
 }
@@ -227,7 +229,8 @@ main {
 
 .recipe-hero {
   width: 100%;
-  max-width: 600px;
+  max-width: 800px;
+  height: auto;
   display: block;
   margin: 0 auto 1.5rem;
   border-radius: 8px;
@@ -412,5 +415,11 @@ input[type="submit"]:hover {
 
   .main-nav.open .nav-links {
     display: flex; 
+  }
+}
+
+@media (min-width: 1000px) {
+  .recipe-hero {
+    max-width: 800px;
   }
 }

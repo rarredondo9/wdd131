@@ -32,7 +32,12 @@
 
   <main class="recipe-detail">
     <h1>Charcuterie Board</h1>
-    <img src="images/charcuterie-large.webp" alt="Charcuterie Board" loading="lazy" class="recipe-hero" />
+<picture>
+  <source srcset="images/charcuterie-recipe-large.webp" media="(min-width: 1000px)" />
+  <source srcset="images/charcuterie-recipe-medium.webp" media="(min-width: 500px)" />
+  <img src="images/charcuterie-recipe-small.webp" alt="Charcuterie board" loading="lazy" width="800" height="450" class="recipe-hero" 
+  />
+</picture>
 
     <p class="recipe-description">
       Create a stunning charcuterie board with a mix of cheeses, meats, fruits, and crackers. Perfect for parties, family gatherings, or a cozy night in.
@@ -46,7 +51,7 @@
         <li>Fresh fruits (grapes, berries, figs)</li>
         <li>Crackers and breadsticks</li>
         <li>Olives and pickles</li>
-        <li>Small bowls of nuts and dips</li>
+        <li>Small bowls of nuts and jellys</li>
       </ul>
     </section>
 
