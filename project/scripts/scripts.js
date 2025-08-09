@@ -12,15 +12,16 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // ===== Hamburger Menu =====
-const menuToggle = document.querySelector(".menu-toggle");
-const mainNav = document.querySelector(".main-nav");
+  const menuToggle = document.querySelector(".menu-toggle");
+  const mainNav = document.querySelector(".main-nav");
 
-if(menuToggle && mainNav) {
-  menuToggle.addEventListener("click", () => {
-    mainNav.classList.toggle("open");
-    menuToggle.textContent = mainNav.classList.contains("open") ? "✖" : "☰";
-  });
-}
+  if (menuToggle && mainNav) {
+    menuToggle.addEventListener("click", () => {
+      mainNav.classList.toggle("open");
+      menuToggle.textContent = mainNav.classList.contains("open") ? "✖" : "☰";
+    });
+  }
+
   // ===== Feedback Form =====
   const recipes = [
     { id: "banana-cake", name: "Banana Cake" },
@@ -28,7 +29,6 @@ if(menuToggle && mainNav) {
     { id: "cheesecake", name: "Raspberry Cheesecake" },
   ];
 
-  // Populate recipe select menu
   const select = document.getElementById("recipe");
   if (select) {
     recipes.forEach(recipe => {
@@ -39,7 +39,6 @@ if(menuToggle && mainNav) {
     });
   }
 
-  // Thank You page submission counter
   const counterMsg = document.getElementById("counterMsg");
   if (counterMsg) {
     let count = parseInt(localStorage.getItem("feedbackCount")) || 0;
