@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
     lastModifiedElem.textContent = `Last Modification: ${document.lastModified}`;
   }
     // ===== Hamburguer =====
-  const menuToggle = document.getElementById("menu-toggle");
+  const menuToggle = document.getElementById("hamburguer");
   const navMenu = document.getElementById("nav-menu");
 
   if (menuToggle && navMenu) {
