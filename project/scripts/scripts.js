@@ -12,15 +12,18 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // ===== Hamburger Menu =====
-  const menuToggle = document.getElementById("menu-toggle");
-  const navMenu = document.getElementById("nav-menu");
+const menuToggle = document.getElementById('menu-toggle');
+const navMenu = document.getElementById('nav-menu');
 
-  if (menuToggle && navMenu) {
-    menuToggle.addEventListener("click", () => {
-      navMenu.classList.toggle("open");
-      menuToggle.textContent = navMenu.classList.contains("open") ? "✖" : "☰";
-    });
+menuToggle.addEventListener('click', () => {
+  navMenu.classList.toggle('open');
+  if(navMenu.classList.contains('open')) {
+    menuToggle.innerHTML = '&times;';
+  } else {
+    menuToggle.innerHTML = '&#9776;';
   }
+});
+
 
   // ===== Feedback Form Recipes =====
   const recipes = [

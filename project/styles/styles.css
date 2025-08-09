@@ -112,14 +112,13 @@ main {
   display: none;
   background: none;
   border: none;
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: white;
   cursor: pointer;
   z-index: 1001;
   position: relative;
 }
 
-/* ===== RESPONSIVE NAV ===== */
 @media (max-width: 768px) {
   #menu-toggle {
     display: block;
@@ -130,12 +129,12 @@ main {
     flex-direction: column;
     background-color: #3e3e3e;
     position: absolute;
-    top: 100%;
+    top: 60px; 
     right: 0;
     left: 0;
     padding: 1rem;
-    z-index: 2000;
     border-radius: 0 0 8px 8px;
+    z-index: 1000;
   }
 
   #nav-menu.open {
