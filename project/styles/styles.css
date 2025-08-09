@@ -76,8 +76,6 @@ main {
 .main-nav {
   display: flex;
   align-items: center;
-  gap: 1rem;
-  position: relative; 
 }
 
 /* ===== NAV LINKS ===== */
@@ -126,22 +124,44 @@ main {
     display: block;
   }
 
+  #nav-menu {
+    display: none;
+    flex-direction: column;
+    background-color: #3e3e3e;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0; 
+    padding: 1rem;
+    z-index: 2000; 
+  }
+
   #nav-menu.open {
     display: flex !important;
   }
 }
 
 @media (min-width: 769px) {
+  .main-nav {
+    display: flex;
+    align-items: center;
+  }
+
   #menu-toggle {
     display: none;
   }
 
   #nav-menu {
     display: flex !important;
-    position: static;
     flex-direction: row;
+    gap: 2rem;
+    position: static;
     background: none;
     padding: 0;
+  }
+
+  #nav-menu a {
+    font-size: 0.8rem;
   }
 }
 
