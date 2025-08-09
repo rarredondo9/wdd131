@@ -91,6 +91,7 @@ main {
   z-index: 1000;
   width: 150px;
   border-radius: 4px;
+  border: 2px #00a000;
 }
 
 #nav-menu a {
@@ -139,6 +140,7 @@ main {
 
   #nav-menu.open {
     display: flex !important;
+    flex-direction: column;
   }
 }
 
