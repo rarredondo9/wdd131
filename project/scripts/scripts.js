@@ -48,4 +48,3 @@ document.addEventListener("DOMContentLoaded", () => {
     counterMsg.textContent = `You have submitted ${count} feedback(s).`;
   }
 });
-
