@@ -393,6 +393,7 @@ input[type="submit"]:hover {
   }
 }
 
+
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
@@ -402,7 +403,7 @@ input[type="submit"]:hover {
     color: white;
     cursor: pointer;
     z-index: 1001;
-    position: relative; 
+    position: relative;
   }
 
   .nav-links {
@@ -420,14 +421,5 @@ input[type="submit"]:hover {
 
   .main-nav.open .nav-links {
     display: flex !important;
-  }
-
-  .nav-links li {
-    margin-bottom: 0.8rem;
-  }
-
-  .nav-links a {
-    font-size: 0.8rem;
-    padding: 0.5rem 0.3rem;
   }
 }
