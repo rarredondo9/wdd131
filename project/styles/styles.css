@@ -393,7 +393,6 @@ input[type="submit"]:hover {
   }
 }
 
-/* Mobile styles */
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
@@ -420,12 +419,15 @@ input[type="submit"]:hover {
   }
 
   .main-nav.open .nav-links {
-    display: flex !important; 
+    display: flex !important;
   }
-}
 
-@media (min-width: 1000px) {
-  .recipe-hero {
-    max-width: 800px;
+  .nav-links li {
+    margin-bottom: 0.8rem;
+  }
+
+  .nav-links a {
+    font-size: 0.8rem;
+    padding: 0.5rem 0.3rem;
   }
 }
