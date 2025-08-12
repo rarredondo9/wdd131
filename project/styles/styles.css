@@ -430,3 +430,28 @@ input[type="submit"]:hover {
   box-shadow: 3px 3px 0 #222222;
  
 }
+
+/* ===== FOOTER ===== */
+.site-footer {
+  background-color: #2a2a2a;
+  color: #f5f5f5;
+  text-align: center;
+  padding: 1rem;
+}
+
+.site-footer p {
+  margin: 0.3rem 0;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.social-icon {
+  width: 40px; 
+  height: 40px;
+  object-fit: contain;
+}
